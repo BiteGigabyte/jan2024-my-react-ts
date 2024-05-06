@@ -1,0 +1,10 @@
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 200%;
+}
+
+.mainDiv > img {
+    margin-bottom: 15px;
+}
