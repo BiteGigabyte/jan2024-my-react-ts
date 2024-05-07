@@ -7,10 +7,6 @@ interface IPropsId {
     userID: number
 }
 
-interface IPostsResponseModel {
-    posts: IPostModel[]
-}
-
 const Posts: FC<IPropsId> = ({userID}) => {
 
     const [posts, setPosts] = useState<IPostModel[]>();
@@ -29,6 +25,7 @@ const Posts: FC<IPropsId> = ({userID}) => {
     return (
         <div>
             {posts && posts.map(post => <Post key={post.id} {...post}/>)}
+            {/*{posts && posts.map(post => <Post key={post.id} post={post}/>)}*/}
         </div>
     );
 };

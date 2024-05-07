@@ -16,4 +16,23 @@ const Post: FC<IPostModel> = ({id, title, tags, userId, body, reactions}) => {
     );
 };
 
+
+
+// interface IProps {
+//     post: IPostModel;
+// }
+//
+// const Post: FC<IProps> = ({post}) => {
+//
+//
+//     return (
+//         <div>
+//             <h2>{post.id}, {post.title}</h2>
+//             <h3>{post.tags}, {post.userId}</h3>
+//             <h4>{post.body}, {post.reactions}</h4>
+//         </div>
+//     );
+// };
+//
+
 export default Post;

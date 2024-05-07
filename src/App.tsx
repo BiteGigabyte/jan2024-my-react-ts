@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
+
 import Users from "./components/Users/Users";
-import {IPostModel} from "./models";
 import Posts from "./components/Posts/Posts";
 
 
@@ -9,7 +9,7 @@ import Posts from "./components/Posts/Posts";
 
 const App = () => {
 
-    const [postTrigger, setPostTrigger] = useState<number>(-1)
+    const [postTrigger, setPostTrigger] = useState<number | null>(null)
     const getPostsOfUser = (id: number): void => {
         console.log(id);
         if (id >= 0) {
