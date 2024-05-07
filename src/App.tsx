@@ -4,6 +4,9 @@ import Users from "./components/Users/Users";
 import {IPostModel} from "./models";
 import Posts from "./components/Posts/Posts";
 
+
+
+
 const App = () => {
 
     const [postTrigger, setPostTrigger] = useState<number>(-1)
@@ -16,7 +19,7 @@ const App = () => {
 
   return (
       <div>
-          {postTrigger && <Posts/>}
+          {postTrigger && <Posts userID={postTrigger}/>}
           <Users getPostsOfUser={getPostsOfUser}/>
       </div>
   );
