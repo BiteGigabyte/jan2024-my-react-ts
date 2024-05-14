@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {useForm} from "react-hook-form";
+import {SubmitHandler, useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 
 import {IPostModel} from "../../models/IPostModel";
@@ -15,7 +15,7 @@ const PostForm: FC = () => {
     } = useForm<IPostModel>({mode: "all", resolver: joiResolver(postValidator)});
 
 
-    const save = async (formValues: IPostModel) => {
+    const save: SubmitHandler<IPostModel> = async (formValues: IPostModel) => {
         // console.log(formValues.body);
         await postService.create(formValues);
         reset();
@@ -37,7 +37,7 @@ const PostForm: FC = () => {
                 <input type="text" {...register('body')}/>
                 {errors.body && <span>{errors.body.message}</span>}
                 <br/>
-                <button>save</button>
+                <button disabled={!isValid}>save</button>
             </form>
         </div>
     );
