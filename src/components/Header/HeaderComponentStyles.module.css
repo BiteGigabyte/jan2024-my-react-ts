@@ -1,0 +1,24 @@
+.headerStyles {
+        background-color: green;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+
+        height: 5vh;
+}
+
+.linkStyle {
+        text-decoration: none;
+        color: wheat;
+
+        display: flex;
+        align-items: center;
+}
+
+.linkStyle:hover {
+        color: skyblue;
+}
+
+.linkStyle:active {
+        text-decoration: underline;
+}
