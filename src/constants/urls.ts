@@ -11,7 +11,7 @@ const urls: urlsType  = {
     posts: '/posts',
     users: '/users',
     comments: '/comments',
-    userPosts: (id) => `users/${id}/posts`,
+    userPosts: (id) => `/users/${id}/posts`,
     postComments: (id) => `/posts/${id}/comments`
 }
 
