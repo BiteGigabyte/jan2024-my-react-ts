@@ -4,12 +4,17 @@ type urlsType = {
     posts: string;
     users: string;
     comments: string;
+    userPosts: (id: string) => string;
+    postComments: (id: string) => string;
 };
 const urls: urlsType  = {
     posts: '/posts',
     users: '/users',
-    comments: '/comments'
+    comments: '/comments',
+    userPosts: (id) => `users/${id}/posts`,
+    postComments: (id) => `/posts/${id}/comments`
 }
+
 
 export {
     baseURL,

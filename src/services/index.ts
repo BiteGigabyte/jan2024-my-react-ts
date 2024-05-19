@@ -1,4 +1,4 @@
 export * from './axios.service.json';
-export * from './json.users.service';
-export * from './json.posts.service';
-export * from './json.comments.service';
+export * from './json.users.api.service';
+export * from './json.posts.api.service';
+export * from './json.comments.api.service';
