@@ -9,7 +9,7 @@ interface IProps {
 const PostCommentsComponent: FC<IProps> = ({comments}) => {
     return (
         <div>
-            {comments.map(comment => <PostCommentComponent comment={comment}/>)}
+            {comments.map(comment => <PostCommentComponent key={comment.id} comment={comment}/>)}
         </div>
     );
 };
