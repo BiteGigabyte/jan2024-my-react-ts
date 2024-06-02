@@ -32,8 +32,9 @@ const authService = {
 
         }
 
-
         return !!(response?.data?.access && response?.data?.refresh);
+
+
     },
     refresh: async (refreshToken: string) => {
         const response = await axiosInstance.post<ITokenObtainPair>('/auth/refresh', {refresh: refreshToken});
