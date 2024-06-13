@@ -3,10 +3,11 @@ import './App.css';
 import {Outlet} from "react-router-dom";
 
 import {HeaderComponent} from "./components/Headers/HeaderComponent";
-import {postService, userService} from "./services/api.service";
+import {commentService, postService, userService} from "./services/api.service";
 import {Context} from "./context/ContextProvider";
 import {IUserModel} from "./models/IUserModel";
 import {IPostModel} from "./models/IPostModel";
+import {ICommentModel} from "./models/ICommentModel";
 
 const App = () => {
 
@@ -15,9 +16,13 @@ const App = () => {
 
     const [favoriteUserState, setFavoriteUserState] = useState<IUserModel | null>(null);
 
+    const [comments, setComments] = useState<ICommentModel[]>([]);
+
+
     useEffect(() => {
         userService.getUsers().then(value => setUsers(value.data));
         postService.getPosts().then(value => setPosts(value.data));
+        commentService.getComments().then(value => setComments(value.data));
 
     }, []);
 
@@ -36,6 +41,9 @@ const App = () => {
                 },
                 postStore: {
                     allPosts: posts,
+                },
+                commentStore: {
+                    allComments: comments,
                 }
             }}>
                 <Outlet/>

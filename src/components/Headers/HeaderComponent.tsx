@@ -9,6 +9,8 @@ const HeaderComponent = () => {
                 <li><Link to={'users'}>user page</Link></li>
                 <li><Link to={'posts'}>posts page</Link></li>
                 <li><Link to={'userPosts'}>users with posts page</Link></li>
+                <li><Link to={'comments'}>comments</Link></li>
+                <li><Link to={'postComments'}>post with comments</Link></li>
             </ul>
             
         </div>
