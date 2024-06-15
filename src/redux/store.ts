@@ -5,7 +5,9 @@ import {counter1Slice} from "../slices/slice1";
 
 export const {
     increment,
-    decrement
+    decrement,
+    reset,
+    incrementByAmount
 } = counter1Slice.actions;
 
 export const store = configureStore({

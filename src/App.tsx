@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import {decrement, increment, useAppDispatch, useAppSelector} from "./redux/store";
+import {decrement, increment, incrementByAmount, reset, useAppDispatch, useAppSelector} from "./redux/store";
 
 const App = () => {
 
@@ -18,6 +18,12 @@ const App = () => {
           <button onClick={() => {
               dispatch(decrement());
           }}>decrement</button>
+          <button onClick={() => {
+              dispatch(reset());
+          }}>reset</button>
+          <button onClick={() => {
+              dispatch(incrementByAmount(10))
+          }}>increment by 10 amount</button>
       </div>
   );
 };
