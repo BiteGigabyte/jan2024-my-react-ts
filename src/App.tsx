@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
+import {Outlet} from "react-router-dom";
 
-import React from 'react';
+import {HeaderComponent} from "./components/HeaderComponent";
+
 
 const App = () => {
   return (
       <div>
-        App
-
+        <HeaderComponent/>
+        <Outlet/>
       </div>
   );
 };
-
-export {App};
 
 export default App;
